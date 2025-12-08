@@ -56,6 +56,26 @@ INSERT INTO REPAIR_HISTORY VALUES (203, 3, DATE '2023-08-01', 'Low airflow', 'Cl
 INSERT INTO REPAIR_HISTORY VALUES (204, 4, DATE '2021-02-10', 'Screen malfunction', 'Installed new display unit');
 INSERT INTO REPAIR_HISTORY VALUES (205, 5, DATE '2023-07-15', 'Alarm malfunction', 'Updated firmware');
 
--- procedure
+1.PROCEDURES
+--PROCEDURE ADD_EQUIPMENT
 
-  
+CREATE OR REPLACE PROCEDURE add_equipment(
+    p_equipment_id   NUMBER,
+    p_name           VARCHAR2,
+    p_type           VARCHAR2,
+    p_status         VARCHAR2
+)
+AS
+BEGIN
+    INSERT INTO EQUIPMENT (equipment_id, name, type, status)
+    VALUES (p_equipment_id, p_name, p_type, p_status);
+
+    IF SQL%FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('Equipment inserted successfully.');
+        DBMS_OUTPUT.PUT_LINE('Rows inserted: ' || SQL%ROWCOUNT);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Insert failed.');
+    END IF;
+END;
+/  
+
