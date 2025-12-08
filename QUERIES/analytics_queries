@@ -1,0 +1,7 @@
+SELECT equipment_id,
+       name,
+       purchase_date,
+       ROW_NUMBER() OVER (ORDER BY purchase_date DESC) AS row_num,
+       RANK() OVER (ORDER BY purchase_date DESC) AS rank_val,
+       DENSE_RANK() OVER (ORDER BY purchase_date DESC) AS dense_rank_val
+FROM equipment;
