@@ -82,11 +82,11 @@ This innovative integration ensures accuracy, safety compliance, and real-time u
 
 # 5. Phase I: Problem Statement ✔️
 
-This phase involved identifying and clearly outlining the key challenges in traditional parking systems. Issues like inefficient record-keeping, slot management, and auditing were documented to justify the need for an automated PL/SQL-based solution.
+This phase involved identifying and clearly outlining the key challenges in tracking mining systems. Issues like inefficient record-keeping, equipment management, and auditing were documented to justify the need for an automated PL/SQL-based solution.
 
 Phase II: Business Process Modeling ✔️
 
-In this stage, workflows and interactions between system entities (users, vehicles, attendants, etc.) were mapped using process diagrams. The aim was to understand how parking operations are performed and how to model them efficiently in a database system.
+In this stage, workflows and interactions between system entities (operators, equipments, repairs, etc.) were mapped using process diagrams. The aim was to understand how parking operations are performed and how to model them efficiently in a database system.
 
 # Phase III: Logical Design ✔️
 
@@ -95,7 +95,7 @@ This phase focused on converting the business model into a database model. Entit
 
 # Phase IV: Database Creation ✔️
 
-Using Oracle SQL tools, the logical design was translated into a physical database. All core tables, such as USERS, VEHICLES, PARKING_SLOTS, etc., were created along with primary and foreign keys.
+Using Oracle SQL tools, the logical design was translated into a physical database. All core tables, such as EQUIPMENT, MAINTENANCE, OPERATORS, etc., were created along with primary and foreign keys.
 
 <img width="574" height="370" alt="image" src="https://github.com/user-attachments/assets/37cf113f-2795-4aad-b87e-6e6407644cba" />
 
@@ -144,6 +144,7 @@ The system will enable mining administrators to:
 
 # Phase VIII: Final Presentation & GitHub Report ✔️
 The last phase involved presenting the completed system, showcasing features, and demonstrating the technical implementation. All documentation, ERDs, and source code were uploaded to GitHub for final review and grading.
+
 # 8. 📄 License
 Submitted as Capstone Project for Database Development with PL/SQL (2025-2026) at AUCA.
 
